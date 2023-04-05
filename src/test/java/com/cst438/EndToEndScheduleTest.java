@@ -20,6 +20,11 @@ import com.cst438.domain.CourseRepository;
 import com.cst438.domain.Enrollment;
 import com.cst438.domain.EnrollmentRepository;
 
+import com.cst438.domain.Student;
+import com.cst438.domain.StudentRepository;
+import com.cst438.domain.StudentDTO;
+
+
 /*
  * This example shows how to use selenium testing using the web driver 
  * with Chrome browser.
@@ -104,11 +109,11 @@ public class EndToEndScheduleTest {
 
 			// Locate and click "Get Schedule" button
 			
-			driver.findElement(By.xpath("//a")).click();
-			Thread.sleep(SLEEP_DURATION);
+			//driver.findElement(By.xpath("//a")).click();
+			//Thread.sleep(SLEEP_DURATION);
 
 			// Locate and click "Add Course" button which is the first and only button on the page.
-			driver.findElement(By.xpath("//button")).click();
+			driver.findElement(By.xpath("//button[contains(text(),'Get Schedule')]")).click();
 			Thread.sleep(SLEEP_DURATION);
 
 			// enter course no and click Add button
